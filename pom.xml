@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>top.zhx47</groupId>
+    <artifactId>baiduwp</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>baiduwp</name>
+    <description>baiduwp</description>
+
+    <modules>
+        <module>baiduwp-infrastructure</module>
+        <module>baiduwp-api</module>
+        <module>baiduwp-admin</module>
+        <module>baiduwp-database</module>
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <retrofit.version>3.1.2</retrofit.version>
+        <jjwt.version>0.12.6</jjwt.version>
+        <mybatis-plus.version>3.5.7</mybatis-plus.version>
+        <guava.version>33.3.0-jre</guava.version>
+        <baiduwp.version>0.0.1-SNAPSHOT</baiduwp.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.lianjiatech</groupId>
+                <artifactId>retrofit-spring-boot-starter</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>top.zhx47</groupId>
+                <artifactId>baiduwp-database</artifactId>
+                <version>${baiduwp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>top.zhx47</groupId>
+                <artifactId>baiduwp-infrastructure</artifactId>
+                <version>${baiduwp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>top.zhx47</groupId>
+                <artifactId>baiduwp-api</artifactId>
+                <version>${baiduwp.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+</project>
